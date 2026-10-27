@@ -1,0 +1,66 @@
+
+services:
+  web:
+    build: .
+    image: docker-week4-web:1.0
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - week4-network
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    image: docker-week4-backend:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_USER: appuser
+      DB_PASSWORD: appsecret123
+      DB_NAME: devopsdb
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - week4-network
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootsecret123
+      MYSQL_DATABASE: devopsdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: appsecret123
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootsecret123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - week4-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+    networks:
+      - week4-network
+    restart: unless-stopped
+
+networks:
+  week4-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  mysql-data:
+
