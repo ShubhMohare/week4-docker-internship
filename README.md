@@ -63,7 +63,7 @@ Open http://localhost:8080 in your browser.
 
 ### 1. Running Web Application
 
-![Running Web Application]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Running website.png")
+![Running Website](screenshots/Screenshot%20%E2%80%94%20Running%20website.png)
 
 ### 2. Running Docker Containers
 
