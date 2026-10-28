@@ -60,29 +60,32 @@ docker compose ps
 Open http://localhost:8080 in your browser.
 
 ## 📸 Project Screenshots
+### 1. Docker Hub Repositories
+![Docker Hub Repositories](screenshots/Docker%20Hub%20repositories.png)
 
-### 1. Running Web Application
+### 2. Implementation Summary
+![Implementation Summary](screenshots/Screenshot%20%20Implementation%20Summary.png)
 
+### 3. Backend Health
+![Backend Health](screenshots/Screenshot%20%E2%80%94%20Backend%20health.png)
+
+### 4. Database Connection
+![Database Connection](screenshots/Screenshot%20%E2%80%94%20Database%20connection.png)
+
+### 5. Docker Hub Repository
+![Docker Hub Repository](screenshots/Screenshot%20%E2%80%94%20Docker%20Hub%20repository.png)
+
+### 6. Docker Images
+![Docker Images](screenshots/Screenshot%20%E2%80%94%20Docker%20images.png)
+
+### 7. Running Containers
+![Running Containers](screenshots/Screenshot%20%E2%80%94%20Running%20containers.png)
+
+### 8. Running Website
 ![Running Website](screenshots/Screenshot%20%E2%80%94%20Running%20website.png)
 
-### 2. Running Docker Containers
-
-![Running Docker Containers]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Running containers.png")
-
-### 3. Docker Images
-
-![Docker Images]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Docker images.png")
-
-### 4. Backend Health Check
-
-![Backend Health Check]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Backend health.png")
-
-### 5. MySQL Database Connection
-
-![MySQL Database Connection]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Database connection.png")
-### 6. Docker Hub
-
-![Docker Hub]("\\wsl.localhost\Ubuntu\home\shubh\docker-week4-project\screenshots\Screenshot — Docker Hub repository.png")
+### 9. Pulling Images from Docker Hub
+![Pulling Images from Docker Hub](screenshots/pulling%20images%20from%20Docker%20Hub.png)
 
 ## ✅ Results
 
